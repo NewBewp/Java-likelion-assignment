@@ -165,7 +165,7 @@ public class Room {
         System.out.print("Nhập id phòng cần đặt: ");
         int room_id = sc.nextInt();
 
-        Room roomBook = null; // Bien tap de luu phong tim dc
+        Room roomBook = null; // Bien tam de luu phong tim dc
         //Tim phong
         for (Room rooms : roomArrayList) {
             if (rooms.getRoom_id() == room_id) {
@@ -179,7 +179,7 @@ public class Room {
         }
 
         if (!roomBook.room_status) {
-            System.out.println("Phong dat duoc dat");
+            System.out.println("Phong da duoc dat");
         }
 
         //Tim khach hang
@@ -200,5 +200,8 @@ public class Room {
         roomBook.setRoom_status(false);
         roomBook.customer = customerBooking;
 
+        System.out.println("Dat phong thanh cong");
+        detailRoom(roomArrayList, room_id);
+        
     }
 }
